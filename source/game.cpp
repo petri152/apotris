@@ -245,7 +245,7 @@ void checkSounds() {
             int n = game->previousClear.linesCleared;
             if(n < 8){
                 clearTypeText = "tetris";
-                soundEffect = SFX_QUAD;
+                soundEffect = SFX_TETRIS;
             }else if(n < 12){
                 clearTypeText = "octo";
                 soundEffect = SFX_OCTORIS;
@@ -264,9 +264,9 @@ void checkSounds() {
             }
         } else if (game->previousClear.linesCleared == 4) {
             if (game->previousClear.isBackToBack == 1)
-                soundEffect = SFX_BACKTOBACKQUAD;
+                soundEffect = SFX_BACKTOBACKTETRIS;
             else
-                soundEffect = SFX_QUAD;
+                soundEffect = SFX_TETRIS;
             clearTypeText = "tetris";
         } else if (game->previousClear.linesCleared == 3) {
             soundEffect = SFX_TRIPLE;
